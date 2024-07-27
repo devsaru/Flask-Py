@@ -1,0 +1,13 @@
+version: '3'    #Specify the version of the Docker compose file format
+
+
+services:              #Defines  the services (containers) that make up your application
+  web:
+    build: .
+    ports:
+      -"5005:5005"      #Ports the services port 5005 on host to 5005 on the caontainer
+      volumes:        #Mounts the current directory on the host to /app in the container,allowing for code changes without rebuilding the image
+        -.:/app
+
+      environment:    #sets the enviroment variable flask-env to the development inside the container
+        FLASK_ENV=development  

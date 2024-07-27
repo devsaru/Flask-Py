@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Customer List</h1>
+    <table border="1">
+        <tr>
+            <th>Customer ID</th>
+            <th>store ID</th>
+            <th>first ID</th>
+            <th>last ID</th>
+            <th>email id</th>
+            <th>address ID</th>
+            <th>active ID</th>
+            <th>create ID</th>
+            <th> Last update</th>
+        </tr>
+        {% for customer in test %}
+        <tr>
+            <td>{{customer.customer_id}}</td>
+            <td>{{customer.store_id}}</td>
+            <td>{{customer.first_name}}</td>
+            <td>{{customer.last_name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.address_id}}</td>
+            <td>{{customer.active}}</td>
+            <td>{{customer.create_date}}</td>
+            <td>{{customer.last_update}}</td>
+        </tr>
+        {% endfor %}
+    </table>  
+</body>
+</html>
